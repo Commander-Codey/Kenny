@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.Environment;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,9 +19,8 @@ import static com.example.notificationmanipulator.NotificationInterceptorService
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
     private NotificationAdapter adapter;
-    private ArrayList<String> notificationList = new ArrayList<>();
+    private final ArrayList<String> notificationList = new ArrayList<>();
 
 
 
@@ -32,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new NotificationAdapter(notificationList);
         recyclerView.setAdapter(adapter);
