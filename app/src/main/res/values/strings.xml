@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NotificationManipulator</string>
+    <string name="enable_notification_access">Enable Notification Access</string>
 </resources>
